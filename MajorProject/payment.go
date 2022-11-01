@@ -49,7 +49,7 @@ func (h Handler) Paybyid(c *gin.Context) {
 		log.Println(err)
 		return
 	}
-	pay = append(pay, pub)
+	//pay = append(pay, pub)
 	//if result:= h.DB.Model(&details.Payment{}).Where("customer")
 	if err := h.DB.Model(&details.Payment{}).Where("customer_number = ? ", id).Find(&pay).Create(&pub).Error; err != nil {
 		fmt.Println(err.Error())

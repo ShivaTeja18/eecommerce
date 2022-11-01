@@ -64,7 +64,7 @@ type ProductLine struct {
 	ProductLine     string
 	TextDescription string
 	HtmlDescription string
-	Image           []byte //`gorm:"-:all"`
+	Image           []byte
 }
 
 type Payment struct {
